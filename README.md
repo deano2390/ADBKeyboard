@@ -1,6 +1,8 @@
 ADBKeyboard
 ===========
 
+[Download v1.0](https://github.com/deano2390/ADBKeyboard/releases/download/v1.0/AdbKeyboard.exe)
+
 A useful Windows app for forwarding PC keyboard input to a connected Android device over ADB.
 
 When testing Android apps, we often have to repeatedly enter textual infomation in via the keyboard (usernames, passwords etc). We can hard code things into the app or create fancy gradle scripts to avoid this but often we just don't have the time or expertise for this. 
