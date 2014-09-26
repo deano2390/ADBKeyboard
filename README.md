@@ -1,7 +1,7 @@
 ADBKeyboard
 ===========
 
-[Download v1.0](https://github.com/deano2390/ADBKeyboard/releases/download/v1.0/AdbKeyboard.exe)]
+[Download v1.0](https://github.com/deano2390/ADBKeyboard/releases/download/v1.0/AdbKeyboard.exe)
 
 Sorry, Windows only, [Requires .Net 4.5 Framework](http://www.microsoft.com/en-GB/download/details.aspx?id=30653) 
 
