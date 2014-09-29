@@ -258,7 +258,26 @@ namespace AdbKeyboard
             {
                 if (textBox.Text.Length > 0)
                 {
-                    process.StandardInput.WriteLine(@"input text " + textBox.Text);
+                    string inputString = textBox.Text;
+
+                    string[] strings = inputString.Split('|');
+
+                    if (strings.Count() > 1) // contains returns
+                    {
+                        foreach (var s in strings)
+                        {
+                            if (s.Length > 0)
+                            {
+                                process.StandardInput.WriteLine(@"input text " + s);
+                            }
+                            
+                            process.StandardInput.WriteLine(@"input keyevent 66");
+                        }
+                    }
+                    else // send through as one string
+                    {
+                        process.StandardInput.WriteLine(@"input text " + inputString);
+                    }
                 }
             }
 
@@ -288,6 +307,11 @@ namespace AdbKeyboard
         private void linkHelp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("This program is a tool for making repetitive text entry a little less painful when testing Android apps. Run this program and click the start button, while the app is focused it will forward your keyboard input to any Android device connected via ADB. Use the macro textboxes to save your commonly used text snippets.", "Help");
+        }
+
+        private void lnkMAcroHints_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Use | characters to automate enter key presses. So for a typical login screen we might use the macro 'my@email.com|myPassword|' to simulate entering the credentials and pressing the enter key in between.", "Help");
         }
     }
 }
