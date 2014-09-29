@@ -18,8 +18,6 @@ namespace AdbKeyboard
     public partial class AdbKeyboard : Form
     {
 
-        private string adbPath = @"D:\ADT\adt-bundle-windows-x86_64-20130729\sdk\platform-tools\adb";
-
         public AdbKeyboard()
         {
             InitializeComponent();
